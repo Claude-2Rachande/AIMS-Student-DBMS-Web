@@ -35,6 +35,19 @@ accuracy and consistency of academic records.
 
 ## Key Features
 
+- Program Management
+- Student Management
+- Course Management
+- Enrollment Management
+- Course Capacity Validation
+- Program-Based Enrollment Validation
+- Multi-Program Course Assignment
+- Cohort Analytics Dashboard
+- Responsive User Interface
+- Data Integrity Enforcement
+
+---
+
 ### Program Management
 
 - Create academic programs
@@ -288,6 +301,63 @@ Relationships:
 
 ---
 
+## Installation
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Claude-2Rachande/AIMS-Student-DBMS-Web.git
+cd AIMS-Student-DBMS-Web
+```
+
+### 2. Create a Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+### 3. Activate the Virtual Environment
+
+**Windows:**
+
+```bash
+venv\Scripts\activate
+```
+
+**Linux / macOS:**
+
+```bash
+source venv/bin/activate
+```
+
+### 4. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 5. Apply Database Migrations
+
+```bash
+python manage.py migrate
+```
+
+### 6. Start the Development Server
+
+```bash
+python manage.py runserver
+```
+
+### 7. Access the Application
+
+Open your browser and visit:
+
+```text
+http://127.0.0.1:8000/
+```
+
+---
+
 ## Database Concepts Demonstrated
 
 This project demonstrates practical implementation of:
@@ -397,6 +467,7 @@ Kenya, in collaboration with AIMS Rwanda and KEMRI.
 My goal is to develop innovative data-driven and technology-based solutions
 that contribute to improving healthcare systems, education, and
 evidence-based decision-making across Africa.
+
 ---
 
 ## License
