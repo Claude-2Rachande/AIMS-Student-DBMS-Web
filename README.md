@@ -1,8 +1,8 @@
 # AIMS Student Database Management System (AIMS Student DBMS)
 
 A comprehensive web-based Student Database Management System developed using
-**Django**, **SQLite**, **HTML**, and **CSS** to support academic program
-administration, student management, course management, and enrollment
+**Python**, **Django**, **SQLite**, **HTML**, and **CSS** to support academic
+program administration, student management, course management, and enrollment
 operations within a university environment.
 
 The system was designed with a strong focus on **data integrity**,
@@ -340,16 +340,63 @@ Planned improvements include:
 
 **Jean Claude Maniriho**
 
-Mastercard Foundation Scholar – AIMS Rwanda
+Mastercard Foundation Scholar at AIMS Rwanda pursuing a Master's degree in
+Mathematical Sciences (Epidemiology), with a strong academic foundation in
+Mathematical Statistics from the University of Rwanda.
 
-Research Interests:
+I am a Full-Stack Developer, Data Scientist, and Researcher passionate about
+applying mathematics, statistics, software engineering, and machine learning
+to solve real-world problems in public health, education, and
+decision-making systems.
 
-- Data Science
+Currently involved in research on the effects of climate change indicators
+on the spatial distribution of malaria infections among school children in
+Kenya, in collaboration with AIMS Rwanda and KEMRI.
+
+---
+
+### Technical Skills
+
+- Python
+- Django
+- SQL & Database Design
+- SQLite & PostgreSQL
+- HTML, CSS, JavaScript
+- Git & GitHub
+- R Programming
+- MATLAB
 - Statistical Modeling
-- Climate Change and Health Analytics
-- Database Systems
-- Software Development
+- Machine Learning
+- Survival Analysis
+- Spatial Data Analysis
 
+---
+
+### Areas of Interest
+
+- Epidemiology
+- Data Science
+- Artificial Intelligence
+- Software Development
+- Public Health Analytics
+- Climate and Health Research
+- Database Systems
+- Decision Science
+
+---
+
+### Connect with Me
+
+- GitHub: [github.com/Claude-2Rachande](https://github.com/Claude-2Rachande)
+- LinkedIn: [jean-claude-maniriho](https://www.linkedin.com/in/jean-claude-maniriho-3a308929b)
+
+---
+
+### Vision
+
+My goal is to develop innovative data-driven and technology-based solutions
+that contribute to improving healthcare systems, education, and
+evidence-based decision-making across Africa.
 ---
 
 ## License
