@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Delete Course</title>
+
+</head>
+
+<body>
+
+    <h1>Delete Course</h1>
+
+    <p>
+
+        Are you sure you want to delete:
+
+        <strong>
+
+            {{ course.course_code }}
+
+            -
+
+            {{ course.course_name }}
+
+        </strong>
+
+        ?
+
+    </p>
+
+    <form method="post">
+
+        {% csrf_token %}
+
+        <button type="submit">
+
+            Yes, Delete
+
+        </button>
+
+    </form>
+
+    <br>
+
+    <a href="/courses/">
+
+        Cancel
+
+    </a>
+
+</body>
+
+</html>

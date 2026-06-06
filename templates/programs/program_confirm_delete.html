@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Delete Program</title>
+
+</head>
+
+<body>
+
+    <h1>Delete Program</h1>
+
+    <p>
+
+        Are you sure you want to delete:
+
+        <strong>
+
+            {{ program.program_name }}
+
+            -
+
+            {{ program.specialization }}
+
+        </strong>
+
+        ?
+
+    </p>
+
+    <form method="post">
+
+        {% csrf_token %}
+
+        <button type="submit">
+
+            Yes, Delete
+
+        </button>
+
+    </form>
+
+    <br>
+
+    <a href="/programs/">
+
+        Cancel
+
+    </a>
+
+</body>
+
+</html>

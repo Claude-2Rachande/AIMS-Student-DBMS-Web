@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enrollment Management</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f4f6f9;
+            margin:0;
+        }
+
+        .header{
+            background:#002147;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        .container{
+            width:90%;
+            margin:auto;
+            margin-top:30px;
+        }
+
+        .top-actions{
+            display:flex;
+            justify-content:space-between;
+            margin-bottom:20px;
+        }
+
+        .btn{
+            text-decoration:none;
+            padding:10px 20px;
+            border-radius:5px;
+            font-weight:bold;
+        }
+
+        .dashboard-btn{
+            background:#002147;
+            color:white;
+        }
+
+        .add-btn{
+            background:#fcb900;
+            color:#002147;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            background:white;
+        }
+
+        th{
+            background:#002147;
+            color:white;
+            padding:15px;
+        }
+
+        td{
+            padding:15px;
+            text-align:center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Enrollment Management</h1>
+    </div>
+
+    <div class="container">
+
+        <div class="top-actions">
+            <a href="/" class="btn dashboard-btn">
+                ← Dashboard
+            </a>
+            <a href="/enrollments/add/" class="btn add-btn">
+                + Add Enrollment
+            </a>
+        </div>
+
+        <table>
+            <tr>
+                <th>Student</th>
+                <th>Course</th>
+                <th>Enrollment Date</th>
+                <th>Actions</th>
+            </tr>
+
+            {% for enrollment in enrollments %}
+            <tr>
+                <td>{{ enrollment.student }}</td>
+                <td>{{ enrollment.course }}</td>
+                <td>{{ enrollment.enrollment_date }}</td>
+                <td>
+                    <a href="/enrollments/update/{{ enrollment.id }}/">
+                        Edit
+                    </a>
+                    |
+                    <a href="/enrollments/delete/{{ enrollment.id }}/">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="4">
+                    No enrollments available.
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+
+    </div>
+
+</body>
+</html>

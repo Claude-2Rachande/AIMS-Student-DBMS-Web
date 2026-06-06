@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Management</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f4f6f9;
+            margin:0;
+        }
+
+        .header{
+            background:#002147;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+
+        .container{
+            width:90%;
+            margin:auto;
+            margin-top:30px;
+        }
+
+        .top-actions{
+            display:flex;
+            justify-content:space-between;
+            margin-bottom:20px;
+        }
+
+        .btn{
+            text-decoration:none;
+            padding:10px 20px;
+            border-radius:5px;
+            font-weight:bold;
+        }
+
+        .dashboard-btn{
+            background:#002147;
+            color:white;
+        }
+
+        .add-btn{
+            background:#fcb900;
+            color:#002147;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            background:white;
+        }
+
+        th{
+            background:#002147;
+            color:white;
+            padding:15px;
+        }
+
+        td{
+            padding:15px;
+            text-align:center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Course Management</h1>
+    </div>
+
+    <div class="container">
+
+        <div class="top-actions">
+            <a href="/" class="btn dashboard-btn">
+                ← Dashboard
+            </a>
+            <a href="/courses/add/" class="btn add-btn">
+                + Add Course
+            </a>
+        </div>
+
+        <table>
+            <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Program</th>
+                <th>Capacity</th>
+                <th>Actions</th>
+            </tr>
+
+            {% for course in courses %}
+            <tr>
+                <td>{{ course.course_code }}</td>
+                <td>{{ course.course_name }}</td>
+                <td>
+                    {% for program in course.programs.all %}
+                        {{ program }}{% if not forloop.last %}, {% endif %}
+                    {% endfor %}
+                </td>
+                <td>{{ course.capacity }}</td>
+                <td>
+                    <a href="/courses/update/{{ course.id }}/">
+                        Edit
+                    </a>
+                    |
+                    <a href="/courses/delete/{{ course.id }}/">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5">
+                    No courses available.
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+
+    </div>
+
+</body>
+</html>
